@@ -1,60 +1,33 @@
-# OAuth2.0
-Starter Code for Auth&amp;Auth course
-# Installing the Vagrant VM for ud330 - Authentication & Authorization
+# Chris Dunleavy - Online Board Game Store
+----
+This project Python with the Flask framework library and SQLAlchemy to run an online board game store. Users may view the store without needing an account, and are able to view a list of publishers, a list of all games, and a list of games filtered by publisher. Users may log in with Facebook or Google, after which they can add new publishers, add new games for those publishers, and edit and delete games and publishers that they've created. The game lists can be sorted by length, player count, price, and name via a dropdown menu. The server will connect to the included database, which has already been pupotaled with three publishers, each with five games.
 
-**Note: If you already have a vagrant machine installed from previous Udacity courses skip to the 'Fetch the Source Code and VM Configuration' section**
+----
+## Getting Started
+### Prerequisites
+1. Python 2.7 is required to run the blog. It can be downloaded here: https://www.python.org/download/releases/2.7/
 
-In Lessons 2,3 and 4 of this course, you'll use a virtual machine (VM) to run a web server and a web app that uses it. The VM is a Linux system that runs on top of your own machine.  You can share files easily between your computer and the VM.
+2. VirtualBox is required to run the Virtual Machine (VM) which will be used for database purposes. It can be downloaded here: https://www.virtualbox.org/wiki/Downloads
 
-We're using the Vagrant software to configure and manage the VM. Here are the tools you'll need to install to get it running:
+3. Vagrant is used for syncing up files and directories between your machine and the VM. It can be downloaded here: https://www.vagrantup.com/downloads.html
 
-### Git
-
-If you don't already have Git installed, [download Git from git-scm.com.](http://git-scm.com/downloads) Install the version for your operating system.
-
-On Windows, Git will provide you with a Unix-style terminal and shell (Git Bash).  
-(On Mac or Linux systems you can use the regular terminal program.)
-
-You will need Git to install the configuration for the VM. If you'd like to learn more about Git, [take a look at our course about Git and Github](http://www.udacity.com/course/ud775).
-
-### VirtualBox
-
-VirtualBox is the software that actually runs the VM. [You can download it from virtualbox.org, here.](https://www.virtualbox.org/wiki/Downloads)  Install the *platform package* for your operating system.  You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it.
-
-**Ubuntu 14.04 Note:** If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center, not the virtualbox.org web site. Due to a [reported bug](http://ubuntuforums.org/showthread.php?t=2227131), installing VirtualBox from the site may uninstall other software you need.
-
-### Vagrant
-
-Vagrant is the software that configures the VM and lets you share files between your host computer and the VM's filesystem.  [You can download it from vagrantup.com.](https://www.vagrantup.com/downloads) Install the version for your operating system.
-
-**Windows Note:** The Installer may ask you to grant network permissions to Vagrant or make a firewall exception. Be sure to allow this.
-
-## Fetch the Source Code and VM Configuration
-
-**Windows:** Use the Git Bash program (installed with Git) to get a Unix-style terminal.  
-**Other systems:** Use your favorite terminal program.
-
-From the terminal, run:
-
-    git clone https://github.com/udacity/OAuth2.0 oauth
-
-This will give you a directory named **oauth** complete with the source code for the flask application, a vagrantfile, and a bootstrap.sh file for installing all of the necessary tools. 
-
-## Run the virtual machine!
-
-Using the terminal, change directory to oauth (**cd oauth**), then type **vagrant up** to launch your virtual machine.
+4. Git Bash is the recommended command line interface for this project. Git Bash is included with Git, which can be downloaded here: https://git-scm.com/downloads
 
 
-## Running the Restaurant Menu App
-Once it is up and running, type **vagrant ssh**. This will log your terminal into the virtual machine, and you'll get a Linux shell prompt. When you want to log out, type **exit** at the shell prompt.  To turn the virtual machine off (without deleting anything), type **vagrant halt**. If you do this, you'll need to run **vagrant up** again before you can log into it.
+### Local Installation
+1. Extract the contents of PROJECT.zip to a directory of your choice.
+2. Navigate to that directory in Git Bash, and then navigate to the 'vagrant' directory within it.
+3. Launch Vagrant by entering `vagrant up` into your console.
+4. Log into the VM by entering `vagrant ssh` into your console.
+5. Enter `cd /vagrant` into the console (include the '/').
+6. Launch the server with the command ` python project.py`.
 
+## Troubleshooting
+It's important that you're using Python 2 and not Python 3.
 
-Now that you have Vagrant up and running type **vagrant ssh** to log into your VM.  change to the /vagrant directory by typing **cd /vagrant**. This will take you to the shared folder between your virtual machine and host machine.
+If you run into any problems, check the Google App Engine documentation. They have guides to get an app running and can assist you with any problems.
+https://cloud.google.com/appengine/docs/
 
-Type **ls** to ensure that you are inside the directory that contains project.py, database_setup.py, and two directories named 'templates' and 'static'
+Here are some tutorials that you may find helpful.
+https://cloud.google.com/appengine/docs/standard/python/tutorials
 
-Now type **python database_setup.py** to initialize the database.
-
-Type **python lotsofmenus.py** to populate the database with restaurants and menu items. (Optional)
-
-Type **python project.py** to run the Flask web server. In your browser visit **http://localhost:5000** to view the restaurant menu app.  You should be able to view, add, edit, and delete menu items and restaurants.

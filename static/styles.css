@@ -13,20 +13,21 @@ h1 {
 
 h2 {
 	font-size: 24px;
-	color: #42C3C9;
+	color: #7EBC89;
 	line-height: 29px;
 }
 
 h3 {
 	font-size: 18px;
 	color: #4A4A4A;
-	line-height: 23px;
+	line-height: 13px;
+	margin-top: 15px;
 }
  p {
  	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
  	font-size: 16px;
  	color: #7B7573;
- 	line-height: 24px;
+ 	line-height: 20px;
  	font-weight: 400;
  }
 
@@ -38,7 +39,7 @@ h3 {
 
  a {
  	font-size: 14px;
- 	color: #0093B9;
+ 	color: #69A297;
  	line-height: 17px;
  }
 .padding-top {
@@ -56,12 +57,12 @@ h3 {
 .btn {
 	padding: 20px;
 	margin: 0;
-	border-color: #9FB80A;
+	border-color: #7EBC89;
 	border-width: 2px;
-	color: #9FB80A;;
+	color: #7EBC89;;
 }
 .btn:hover {
-	border-color: #9FB80A;
+	border-color: #7EBC89;
 }
 .btn.delete {
 	border-color: #aaaaaa;
@@ -93,10 +94,10 @@ h3 {
 	height: 15px;
 }
 .divider.blue {
-	background-color: #42C3C9;
+	background-color: #7EBC89;
 }
 .divider.green {
-	background-color: #9FB80A;
+	background-color: #7EBC89;
 }
 .banner.main {
 	height: 150px;
@@ -107,7 +108,7 @@ h3 {
 }
 .banner.menu {
 	height: 150px;
-	background-color: #E1E17F;
+	background-color: #C1DBB3;
 }
 .banner.profile {
 	height: 150px;
@@ -116,21 +117,28 @@ h3 {
 .banner h1 {
 	margin: 45px 0;
 }
- .restaurant-list {
- 	background-color: #F0F0F0;
- 	padding: 20px;
-u }
- .restaurant-list:hover {
- 	background-color: #e1e17f;
- 	padding: 20px;
-}
-.menu-item {
+.publisher-list {
 	background: #F0F0F0;
 	padding: 20px;
 	margin: 20px;
 	margin-left: -20px;
+	border-radius: 15px;
 }
-.menu-price {
+.publisher-list:hover {
+	background-color: #c1dBB3;
+	padding:20px;
+	margin: 20px;
+	margin-left: -20px;
+	border-radius: 15px;
+}
+.game {
+	background: #F0F0F0;
+	padding: 1px 20px;
+	margin: 20px;
+	margin-left: -20px;
+	border-radius: 15px;
+}
+.price {
 	font-weight: 700;
 }
 .creator {
